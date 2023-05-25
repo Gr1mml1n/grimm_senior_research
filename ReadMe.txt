@@ -1,0 +1,9 @@
+Grimm_senior_research is a three-body simulation that uses the Runge-Kutta-Fehlberg algorithm (RK45) in 2d space. To recap, RK45 compares the difference between a fourth and fifth order RK algorithm to a tolerance limit, and then adjusts the time step such the two RK algorithms agree. I, Peyton Grimm, wrote this entire code from scrath.
+
+The simulation is intended to be used in a scenario where there are 2 stars and 1 planet, but can be used for any three body scenario. The simulation runs for each combination of a specified range of periapsises and eccentricities. Each run records the time, position of all 3 bodies, velocity of all 3 bodies, energy, energy offset, and the planet's momentum into a csv file. There is also a "master" csv file that records summary information on each run.
+
+Note that the simulation does not run well when the bodies are very close together, and the time-step will have to become very short to compensate. As a band-aid solution, there is a block of code in the while loop that forces the stars into circular orbit.
+
+In its default configuration, the simulation uses units of AU, years, and solar masses. The simulation will calculate each bodies orbit dynamically by using their acceleration (k) and velocity (j) terms. The stars are initialized to a circular orbit with a separation of 2 AU. A circumbinary planet is placed around the stars using the specified periapsises and eccentricities. Because I built this code from scratch, functions to manipulate vectors in 2d space.
+
+For more information, I'd recommend reading my senior research paper which I have attached to this directory.
